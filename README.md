@@ -1,4 +1,4 @@
-i# The 100-Line AI agent that solves GitHub issues with text-edit tool
+# The 100-Line AI agent that solves GitHub issues with text-edit tool
 > A ~100-line SWE scaffold, now with a string-replacement editor—fewer rounds, and performance close to mainstream frameworks on SWE-bench. Simpler systems generalize better and transfer more easily to other tasks—give it a try!
 ## Introduction
 The **[mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent)** which is 100x smaller than [SWE-agent](https://github.com/swe-agent/swe-agent) achieves an impressive **~65%** solve rate, proving that a **lean software scaffold can still be strong**.
