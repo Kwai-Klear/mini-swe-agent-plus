@@ -42,6 +42,7 @@ class DockerEnvironment:
         self.container_id: str | None = None
         self.config = config_class(**kwargs)
         self._start_container()
+        self.add_edit_tool()
 
     def get_template_vars(self) -> dict[str, Any]:
         return asdict(self.config)
@@ -52,6 +53,7 @@ class DockerEnvironment:
         cmd = [
             self.config.executable,
             "run",
+            "--rm",
             "-d",
             "--name",
             container_name,
@@ -73,6 +75,23 @@ class DockerEnvironment:
         self.logger.info(f"Started container {container_name} with ID {result.stdout.strip()}")
         self.container_id = result.stdout.strip()
 
+    def add_edit_tool(self):
+        """Copy a file from host to container."""
+        import os
+        current_file_path = os.path.abspath(__file__)
+        current_dir = os.path.dirname(current_file_path)
+        src_path = f'{current_dir}/str_replace.py'
+        dest_path = '/testbed/edit_via_str_replace'
+        cmd = [self.config.executable, "cp", src_path, f"{self.container_id}:{dest_path}"]
+        subprocess.run(cmd, check=True)
+
+    def del_edit_tool(self):
+        self.execute("rm /testbed/edit_via_str_replace")
+
+    def cp_file(self, src_file_path, container_dest_path):
+        cmd = [self.config.executable, "cp", src_file_path, f"{self.container_id}:{container_dest_path}"]
+        subprocess.run(cmd, check=True)
+            
     def execute(self, command: str, cwd: str = "", *, timeout: int | None = None) -> dict[str, Any]:
         """Execute a command in the Docker container and return the result as a dict."""
         cwd = cwd or self.config.cwd
