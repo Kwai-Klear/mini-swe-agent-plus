@@ -26,9 +26,8 @@ The figure reports solve rate on SWE-bench Verified for the Qwen3-8B model. Empi
 Klear-Agent-8B significantly outperforms other ~8B models and even matches the performance of some open 32B systems. 
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/92271b0c-a6e1-44a3-aacc-449bd4c9c407" width="50%" alt="image" />
+  <img src="https://huggingface.co/datasets/Kwai-Klear/SWE-smith-mini_swe_agent_plus-trajectories-66k/resolve/main/swe_bench_scaling_grid.svg" width="50%" alt="image" />
 </p>
-
 
 | Method/Model            | Params | Agent Framework | SWE-bench Verified (%) |
 |-------------------------|:------:|-----------------|:----------------:|
