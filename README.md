@@ -72,7 +72,7 @@ export local_vllm_server_ips_filename=_the_path_to_vllm_server_ips_.txt
 
 config=src/minisweagent/config/extra/swebench_add_edit_tool.yaml
 python src/minisweagent/run/extra/swebench_pool_way.py \
-    --model anthropic/claude-sonnet-4-5-20250929 \
+    --model hosted_vllm/hosted_model_name \
     --subset verified \
     --split test \
     --output=eval_results/the_outpath \
