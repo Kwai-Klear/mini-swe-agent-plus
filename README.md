@@ -23,7 +23,7 @@ In mini-swe-agent-plus, we add a minimal string-replacement editor, which perfor
 ## Scalable training performance
 We collected 66k trajectories based on [SWE-smith](https://huggingface.co/datasets/SWE-bench/SWE-smith) and study the model performance with different data scaling. 
 The figure reports solve rate on SWE-bench Verified for the Qwen3-8B model. Empirically, performance increases approximately linearly with the logarithm of the data scale.
-Klear-Agent-8B significantly outperforms other ~8B models and even matches the performance of some open 32B systems. 
+Klear-Agent-8B significantly outperforms other ~8B models and even matches the performance of some open 32B systems.
 
 <p align="left">
   <img src="https://huggingface.co/datasets/Kwai-Klear/SWE-smith-mini_swe_agent_plus-trajectories-66k/resolve/main/swe_bench_scaling_grid.svg" width="66%" alt="image" />
@@ -40,6 +40,9 @@ Klear-Agent-8B significantly outperforms other ~8B models and even matches the p
 | SWE-fixer-72B           | 72B    | SWE-Fixer       | 32.8             |
 | Lingma-SWE-GPT-72B      | 72B    | SWE-Syninfer    | 32.8             |
 | **Klear-Agent-8B-SFT**   | 8B     | **mini-swe-agent-plus**   | 39.0             |
+| **Klear-Agent-8B-RL**   | 8B     | **mini-swe-agent-plus**   | 40.4             |
+| **Klear-Agent-32B-SFT**   | 32B     | **mini-swe-agent-plus**   |   55.2           |
+| **Klear-Agent-32B-RL**   | 32B     | **mini-swe-agent-plus**   | 60.2             |
 
 The collected trajectories are made openly available at [🤗 SWE-smith-mini_swe_agent_plus-trajectories-66k](https://huggingface.co/datasets/Kwai-Klear/SWE-smith-mini_swe_agent_plus-trajectories-66k).
 ## Usage
