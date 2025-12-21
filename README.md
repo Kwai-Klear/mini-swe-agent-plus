@@ -42,7 +42,7 @@ Klear-Agent-8B significantly outperforms other ~8B models and even matches the p
 | **Klear-Agent-8B-SFT**   | 8B     | **mini-swe-agent-plus**   | 39.0             |
 | **Klear-Agent-8B-RL**   | 8B     | **mini-swe-agent-plus**   | 40.4             |
 | **Klear-Agent-32B-SFT**   | 32B     | **mini-swe-agent-plus**   |   55.2           |
-| **Klear-Agent-32B-RL**   | 32B     | **mini-swe-agent-plus**   | 60.2             |
+| **Klear-Agent-32B-RL**   | 32B     | **mini-swe-agent-plus**   | 61.4             |
 
 The collected trajectories are made openly available at [🤗 SWE-smith-mini_swe_agent_plus-trajectories-66k](https://huggingface.co/datasets/Kwai-Klear/SWE-smith-mini_swe_agent_plus-trajectories-66k).
 ## Usage
