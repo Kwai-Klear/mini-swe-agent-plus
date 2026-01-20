@@ -1,5 +1,10 @@
 # The 100-Line AI agent that solves GitHub issues with text-edit tool
 > A ~100-line SWE scaffold, now with a string-replacement editor—fewer rounds, and performance close to mainstream frameworks on SWE-bench. Simpler systems generalize better and transfer more easily to other tasks—give it a try!
+
+### News
+- **2025-12-20**: Our Qwen3-32B model achieves a **61.4%** solving rate, demonstrating strong competitiveness.
+- **2025-11-06**: We have open-sourced **66k** agent trajectories at [🤗 SWE-smith-mini_swe_agent_plus-trajectories-66k](https://huggingface.co/datasets/Kwai-Klear/SWE-smith-mini_swe_agent_plus-trajectories-66k), boosting Qwen3-8B on SWE-bench Verified to nearly **40%**.
+
 ## Introduction
 The **[mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent)** which is 100x smaller than [SWE-agent](https://github.com/swe-agent/swe-agent) achieves an impressive **~65%** solve rate, proving that a **lean software scaffold can still be strong**.
 
